@@ -5,10 +5,6 @@ const Card = require("../src/Card");
 const Deck = require("../src/Deck");
 
 describe("Deck", function () {
-  it("should be a function", function () {
-    const deck = new Deck();
-    expect(Deck).to.be.a("function");
-  });
   it("should know how many cards are in a deck", function () {
     const card1 = new Card(
       1,

@@ -11,6 +11,7 @@ var card1 = new Card(
   "sea otter"
 );
 var turn1 = new Turn("sea otter", card1);
+var turn2 = new Turn("pumpkin", card1);
 
 describe("Turn", function () {
   it("should take in a guess and return that guess", function () {
@@ -20,16 +21,14 @@ describe("Turn", function () {
     expect(card1).to.be.an.instanceof(Card);
     expect(turn1.returnCard()).to.equal(card1);
   });
-  it("should evaluate guesses as true", function () {
+  it("should be able to evaluate guesses as true", function () {
     expect(turn1.evaluateGuess()).to.equal(true);
   });
-  it("should evaluate guesses as false", function () {
-    const turn2 = new Turn("pumpkin", card1);
+  it("should be able to evaluate guesses as false", function () {
     expect(turn2.evaluateGuess()).to.equal(false);
   });
-  it("should give feedback", function () {
+  it("should give feedback on correct or incorrect guesses", function () {
     expect(turn1.giveFeedback()).to.equal("correct!");
-    const turn2 = new Turn("pumpkin", card1);
     expect(turn2.giveFeedback()).to.equal("incorrect!");
   });
 });

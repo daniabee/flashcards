@@ -37,10 +37,10 @@ describe("Game", function () {
     expect(game).to.be.an.instanceof(Game);
   });
 
-  it("should create a deck of cards and a roundobj", function () {
-    game.createCards();
-    game.createDeck();
-    game.createRound();
+  it("should create a deck of cards and start current round", function () {
+    game.makeCards();
+    game.makeDeck();
+    game.makeRound();
     expect(game.deck).to.not.equal(null);
     expect(game.currentRound).to.not.equal(null);
   });

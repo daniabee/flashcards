@@ -22,12 +22,12 @@ class Game {
   }
 
   makeCards() {
-    const cardDeck = this.data.map((questionData) => {
+    const cardDeck = this.data.map((dataPoint) => {
       return new Card(
-        questionData.id,
-        questionData.question,
-        questionData.answers,
-        questionData.correctAnswer
+        dataPoint.id,
+        dataPoint.question,
+        dataPoint.answers,
+        dataPoint.correctAnswer
       );
     });
     return cardDeck;
