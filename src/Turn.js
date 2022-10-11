@@ -3,6 +3,7 @@ class Turn {
     this.guess = guess;
     this.flashCard = flashCard;
   }
+
   returnGuess() {
     return this.guess;
   }
@@ -12,7 +13,7 @@ class Turn {
   }
 
   evaluateGuess() {
-    if (this.guess === this.flashCard.answer) {
+    if (this.returnGuess() === this.flashCard.correctAnswer) {
       return true;
     } else {
       return false;
@@ -20,7 +21,7 @@ class Turn {
   }
 
   giveFeedback() {
-    if (this.guess) {
+    if (this.evaluateGuess()) {
       return "correct!";
     } else {
       return "incorrect!";
