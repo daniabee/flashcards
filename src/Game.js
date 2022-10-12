@@ -9,7 +9,6 @@ const util = require("./util");
 class Game {
   constructor(data = prototypeQuestions) {
     this.currentRound = null;
-    this.deck = null;
     this.data = data;
   }
 
@@ -45,7 +44,6 @@ class Game {
   }
 
   start() {
-    // this.makeRound();
     this.printMessage(this.makeDeck(), this.makeRound());
     this.printQuestion(this.makeRound());
   }
