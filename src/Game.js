@@ -3,6 +3,7 @@ const Round = require("./Round");
 const Deck = require("./Deck");
 const Card = require("./Card");
 const prototypeQuestions = data.prototypeData;
+const starWarsQuestions = data.starWarsData;
 const util = require("./util");
 
 class Game {
