@@ -45,7 +45,7 @@ class Game {
   }
 
   start() {
-    this.makeRound();
+    // this.makeRound();
     this.printMessage(this.makeDeck(), this.makeRound());
     this.printQuestion(this.makeRound());
   }
